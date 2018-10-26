@@ -1,0 +1,11 @@
+<h1>This shows all the posts</h1>
+
+<%= link_to 'Go to new post', new_post_path %></br>
+
+
+<% @posts.each_with_index do |p,i| %>
+  
+  <%= link_to p.title, post_path(p.id) %>
+
+  <%= p.detail %> <br/>
+<% end %>

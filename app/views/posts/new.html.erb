@@ -1,0 +1,12 @@
+<h1>This is the new form for Post </h1>
+<!-- 
+<form action="/posts" method="post">
+  <input type="hidden" authenti
+  Title: <input type="text" name="posts[title]">
+</form> -->
+
+<%= form_with scope:@post ,url: posts_path do |f| %>
+  Title: <%= f.text_field :title %> </br>
+  Detail: <%= f.text_field :detail %> </br>
+  <%= f.submit %>
+<% end %>
